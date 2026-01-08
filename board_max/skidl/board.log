@@ -1,0 +1,4 @@
+WARNING: KICAD6_SYMBOL_DIR environment variable is missing, so the default KiCad symbol libraries won't be searched. @ [/home/bill/src/throw_away/skidl/<frozen importlib._bootstrap_external>:883=>/home/bill/src/throw_away/skidl/<frozen importlib._bootstrap>:241]
+WARNING: KICAD7_SYMBOL_DIR environment variable is missing, so the default KiCad symbol libraries won't be searched. @ [/home/bill/src/throw_away/skidl/<frozen importlib._bootstrap_external>:883=>/home/bill/src/throw_away/skidl/<frozen importlib._bootstrap>:241]
+WARNING: KICAD8_SYMBOL_DIR environment variable is missing, so the default KiCad symbol libraries won't be searched. @ [/home/bill/src/throw_away/skidl/<frozen importlib._bootstrap_external>:883=>/home/bill/src/throw_away/skidl/<frozen importlib._bootstrap>:241]
+ERROR: Unable to find part MAX4820 in library MAX4820EUP_T. @ [/home/bill/src/throw_away/skidl/board.py:68=>/home/bill/src/throw_away/skidl/board.py:68]

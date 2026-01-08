@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "MAX4820EUP_T")(type "KiCad")(uri "${KIPRJMOD}/libraries/MAX4820EUP_T.kicad_sym")(options "")(descr ""))
+  (lib (name "Espressif")(type "KiCad")(uri "${KIPRJMOD}/libraries/espressif_library/symbols/Espressif.kicad_sym")(options "")(descr ""))
+)

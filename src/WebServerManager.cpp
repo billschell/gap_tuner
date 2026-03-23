@@ -24,6 +24,9 @@ void WebServerManager::setupRoutes() {
     _server.on("/wifi-status", HTTP_GET, [this](AsyncWebServerRequest *request){
         this->handleWiFiStatusRequest(request);
     });
+    _server.on("/info", HTTP_GET, [this](AsyncWebServerRequest *request){
+        this->handleInfoRequest(request);
+    });
     // Register specific /test/* routes BEFORE /test — ESPAsyncWebServer uses prefix
     // matching, so /test would otherwise intercept all /test/* requests if registered first.
     _server.on("/test/relay", HTTP_GET, [this](AsyncWebServerRequest *request){
@@ -81,14 +84,21 @@ void WebServerManager::handleButtonRequest(AsyncWebServerRequest *request) {
 }
 
 // GET /wifi-status — returns "online" or "offline"; polled by the UI every 5 seconds.
+// Online when connected as STA (home mode) or running as AP (field mode).
 void WebServerManager::handleWiFiStatusRequest(AsyncWebServerRequest *request) {
-    if (_networkMgr.isConnected()) {
-        request->send(200, "text/plain", WIFI_STATUS_ONLINE); // WIFI_STATUS_ONLINE is extern
-        DEBUG_PRINTLN("WebServerManager: Sent WiFi Status: online"); 
-    } else { 
-        request->send(200, "text/plain", WIFI_STATUS_OFFLINE); // WIFI_STATUS_OFFLINE is extern
-        DEBUG_PRINTLN("WebServerManager: Sent WiFi Status: offline"); 
+    if (_networkMgr.isConnected() || (WiFi.getMode() & WIFI_AP)) {
+        request->send(200, "text/plain", WIFI_STATUS_ONLINE);
+        DEBUG_PRINTLN("WebServerManager: Sent WiFi Status: online");
+    } else {
+        request->send(200, "text/plain", WIFI_STATUS_OFFLINE);
+        DEBUG_PRINTLN("WebServerManager: Sent WiFi Status: offline");
     }
+}
+
+// GET /info — returns device info as JSON (AP SSID, etc.) for use by the UI.
+void WebServerManager::handleInfoRequest(AsyncWebServerRequest *request) {
+    String json = "{\"apSSID\":\"" + _networkMgr.getAPSSID() + "\"}";
+    request->send(200, "application/json", json);
 }
 
 // Catch-all 404 handler for unregistered routes.

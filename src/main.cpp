@@ -92,11 +92,12 @@ const char index_html[] PROGMEM = R"rawliteral(
         .settings-link{color:var(--icom-light-grey);font-size:1.3em;text-decoration:none;opacity:0.6;padding:4px;line-height:1;}
         .settings-link:hover{opacity:1;}
 
-        .wifi-status-line { text-align: center; margin-bottom: 30px; height: 1.2em; }
+        .wifi-status-line { text-align: center; margin-bottom: 30px; min-height: 1.2em; }
         #wifiStatusIndicator { display: inline-block; width: 15px; height: 15px; border-radius: 50%; margin-right: 6px; vertical-align: middle; background-color: #ffc107; transition: background-color 0.5s ease; }
         .wifi-online { background-color: #28a745 !important; }
         .wifi-offline { background-color: #dc3545 !important; }
         #wifiStatusText { font-size: 1.0em; vertical-align: middle; color: var(--icom-light-grey); }
+        #wifiStatusHint { font-size: 0.8em; color: var(--icom-light-grey); opacity: 0.7; margin-top: 3px; }
         
         .button-group{margin-bottom:var(--group-spacing);text-align:left;}
         .button-group:last-child{margin-bottom:15px;}
@@ -118,9 +119,17 @@ const char index_html[] PROGMEM = R"rawliteral(
     <div class="container" id="controlContainer">
         <div class="header">
             <h1>GAP Antenna Tuner</h1>
-            <a href="/settings" class="settings-link" aria-label="Settings">&#9881;</a>
+            <a href="/settings" class="settings-link" aria-label="Settings">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z"/>
+                <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+              </svg>
+            </a>
         </div>
-        <div class="wifi-status-line"> <span id="wifiStatusIndicator"></span><span id="wifiStatusText">Checking...</span> </div>
+        <div class="wifi-status-line">
+            <div><span id="wifiStatusIndicator"></span><span id="wifiStatusText">Checking...</span></div>
+            <div id="wifiStatusHint"></div>
+        </div>
         <div class="button-group"> <h3 class="group-title">Antenna Length</h3> <div class="button-row"> <button data-id="1">Shorter</button> <button data-id="2">Longer</button> </div> </div>
         <div class="button-group"> <h3 class="group-title">Tuning Network</h3> <div class="button-row"> <button data-id="3">None</button> <button data-id="4">1</button> <button data-id="5">2</button> </div> </div>
         <div class="button-group"> <h3 class="group-title">Calibration</h3> <div class="button-row"> <button data-id="6">Open</button> <button data-id="7">Short</button> <button data-id="8">Load</button> </div> </div>
@@ -133,6 +142,8 @@ const char index_html[] PROGMEM = R"rawliteral(
             const statusMessage = document.getElementById('statusMessage');
             let lastHighlightedAntennaButton = null; // To keep track of the last highlighted button in the antenna group
             let lastHighlightedOtherButton = null;    // To keep track of the last highlighted button in the other group
+            let apSSID = '';
+            fetch('/info').then(r => r.json()).then(d => { apSSID = d.apSSID; }).catch(() => {});
 
             // Helper function to determine button group
             function getButtonGroup(buttonId) {
@@ -159,17 +170,24 @@ const char index_html[] PROGMEM = R"rawliteral(
                     })
                     .then(status => {
                         console.log("WiFi Status from ESP32:", status);
-                        if (status === "online") { wifiIndicator.className = 'wifi-online'; wifiStatusText.textContent = "Online"; }
-                        else { wifiIndicator.className = 'wifi-offline'; wifiStatusText.textContent = "Offline (Reported)"; }
+                        const hintEl = document.getElementById('wifiStatusHint');
+                        if (status === "online") {
+                            wifiIndicator.className = 'wifi-online';
+                            wifiStatusText.textContent = "Online";
+                            if (hintEl) hintEl.textContent = '';
+                        } else {
+                            wifiIndicator.className = 'wifi-offline';
+                            wifiStatusText.textContent = "Offline";
+                            if (hintEl) hintEl.textContent = '';
+                        }
                     })
                     .catch(error => {
                         clearTimeout(timeoutId);
                         console.error("Error checking WiFi status:", error.name, error.message);
+                        const hintEl = document.getElementById('wifiStatusHint');
                         if (wifiIndicator) wifiIndicator.className = 'wifi-offline';
-                        if (wifiStatusText) {
-                            if (error.name === 'AbortError') { wifiStatusText.textContent = "Offline (Timeout)"; }
-                            else { wifiStatusText.textContent = "Offline (Unreachable)"; }
-                        }
+                        if (wifiStatusText) wifiStatusText.textContent = 'Offline';
+                        if (hintEl) hintEl.textContent = apSSID ? `Connect to access point: ${apSSID}` : '';
                     });
             }
             checkWifiStatus();

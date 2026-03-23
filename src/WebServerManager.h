@@ -39,6 +39,7 @@ private:
 
     void handleSettingsRequest(AsyncWebServerRequest *request);
     void handleSettingsSaveRequest(AsyncWebServerRequest *request);
+    void handleInfoRequest(AsyncWebServerRequest *request);
 };
 
 #endif // WEBSERVER_MANAGER_H

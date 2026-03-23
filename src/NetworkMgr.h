@@ -6,44 +6,46 @@
 #include <ESPmDNS.h>
 #include <nvs_flash.h> // For NVS flash operations
 #include <nvs.h>       // For NVS API
-#include <ESPAsyncWebServer.h> // For AsyncWebServerRequest
 
 // Define the WiFi reset button pin
 #define WIFI_RESET_BUTTON_PIN GPIO_NUM_1
 
 class NetworkMgr {
 public:
-    // Constructor now only takes hostname; SSID/password handled via NVS/AP
     NetworkMgr(const char* confHostname);
     bool connect();
     void setupMDNS();
     bool isConnected();
 
-    // New methods for NVS credential management
+    // Credential management
     bool saveCredentials(const char* ssid, const char* password);
     bool loadCredentials();
-    void clearCredentials(); // For resetting WiFi config
-    void checkAndHandleWiFiResetButton(); // New method to handle button press
+    void clearCredentials();
+    void checkAndHandleWiFiResetButton();
+
+    // Mode management ("field" or "home")
+    String getMode();
+    void setMode(const char* mode);
+
+    // Accessors for settings UI
+    String getAPSSID()          const { return _apSSID; }
+    const char* getAPPassword() const { return _apPassword; }
+    const char* getHostname()   const { return _hostname; }
+    String getStoredSSID()      const { return _ssid; }
+    bool wifiConnectFailed()    const { return _wifiFailedFlag; }
 
 private:
-    String _ssid;      // Stored SSID from NVS or AP config
-    String _password;  // Stored Password from NVS or AP config
+    String _ssid;
+    String _password;
+    String _apSSID;
+    const char* _apPassword = "gaptuner";
     const char* _hostname;
-    const int _wifiResetButtonPin; // Pin for the WiFi reset button
+    const int _wifiResetButtonPin;
+    bool _wifiFailedFlag = false;
 
-    // NVS handle
     nvs_handle_t _nvsHandle;
 
-    // Web server for configuration AP
-    AsyncWebServer _configWebServer; // New member for config AP web server
-
-    // Helper for starting AP for configuration
-    void startConfigAP();
-    // Helper for handling web server on AP
-    void handleConfigRoot(AsyncWebServerRequest *request);
-    void handleConfigSave(AsyncWebServerRequest *request);
-    void handleConfigReset(AsyncWebServerRequest *request);
-    void handleConfigNotFound(AsyncWebServerRequest *request);
+    void startAP();
 };
 
 #endif // NETWORK_MGR_H

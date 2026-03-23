@@ -21,13 +21,15 @@ const char* mDnsHostname = "gaptuner"; // Keep hostname for mDNS
 #include "GAPTuner.h"
 #include "NetworkMgr.h"
 #include "WebServerManager.h"
+#include "RelayTestController.h"
 
 // --- Global Object Instances ---
-RelayController  g_relayController;
-GAPTuner         g_gaptuner(g_relayController);
-NetworkMgr       g_networkMgr(mDnsHostname);
-AsyncWebServer   g_asyncServer(80);
-WebServerManager g_webServerManager(g_asyncServer, g_gaptuner, g_networkMgr);
+RelayController      g_relayController;
+GAPTuner             g_gaptuner(g_relayController);
+NetworkMgr           g_networkMgr(mDnsHostname);
+AsyncWebServer       g_asyncServer(80);
+RelayTestController  g_relayTestController;
+WebServerManager     g_webServerManager(g_asyncServer, g_gaptuner, g_networkMgr, g_relayTestController);
 
 
 // ==========================================================================
@@ -43,7 +45,9 @@ void setup()
     // Check and handle WiFi reset button press
     g_networkMgr.checkAndHandleWiFiResetButton();
 
+    // Initialize relay pins and set default state for the tuner
     g_relayController.initializePins();
+    g_relayTestController.initializePins();
     g_gaptuner.applyDefaultState();
 
     // Initialize NVS flash
@@ -56,15 +60,12 @@ void setup()
     ESP_ERROR_CHECK(ret);
     DEBUG_PRINTLN("main: NVS flash initialized.");
 
-    if (g_networkMgr.connect()) {
+    bool connected = g_networkMgr.connect();
+    if (connected) {
         g_networkMgr.setupMDNS();
-        g_webServerManager.setupRoutes();
-        g_webServerManager.begin();
-    } else {
-        DEBUG_PRINTLN("Setup: WiFi connection failed. Starting configuration AP.");
-        // The NetworkMgr::connect() method should handle starting the AP if connection fails.
-
     }
+    g_webServerManager.setupRoutes();
+    g_webServerManager.begin();
 }
 
 void loop()
@@ -86,7 +87,10 @@ const char index_html[] PROGMEM = R"rawliteral(
         body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;display:flex;justify-content:center;align-items:flex-start;min-height:100vh;background-color:var(--icom-black);margin:0;padding:20px 15px;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
         .container{background:var(--icom-dark-grey);padding:25px 30px;border-radius:var(--border-radius);box-shadow:0 0 15px var(--icom-shadow-dark), inset 0 0 5px var(--icom-shadow-light);text-align:center;width:100%;max-width:380px;box-sizing:border-box;}
         
-        h1{color:var(--icom-light-grey);margin-top:0;margin-bottom: 0px; font-weight:600;font-size:1.6em;}
+        .header{display:flex;justify-content:space-between;align-items:center;margin-bottom:0;}
+        h1{color:var(--icom-light-grey);margin-top:0;margin-bottom:0;font-weight:600;font-size:1.6em;}
+        .settings-link{color:var(--icom-light-grey);font-size:1.3em;text-decoration:none;opacity:0.6;padding:4px;line-height:1;}
+        .settings-link:hover{opacity:1;}
 
         .wifi-status-line { text-align: center; margin-bottom: 30px; height: 1.2em; }
         #wifiStatusIndicator { display: inline-block; width: 15px; height: 15px; border-radius: 50%; margin-right: 6px; vertical-align: middle; background-color: #ffc107; transition: background-color 0.5s ease; }
@@ -112,11 +116,15 @@ const char index_html[] PROGMEM = R"rawliteral(
 </head>
 <body>
     <div class="container" id="controlContainer">
-        <h1>GAP Antenna Tuner</h1>
+        <div class="header">
+            <h1>GAP Antenna Tuner</h1>
+            <a href="/settings" class="settings-link" aria-label="Settings">&#9881;</a>
+        </div>
         <div class="wifi-status-line"> <span id="wifiStatusIndicator"></span><span id="wifiStatusText">Checking...</span> </div>
         <div class="button-group"> <h3 class="group-title">Antenna Length</h3> <div class="button-row"> <button data-id="1">Shorter</button> <button data-id="2">Longer</button> </div> </div>
         <div class="button-group"> <h3 class="group-title">Tuning Network</h3> <div class="button-row"> <button data-id="3">None</button> <button data-id="4">1</button> <button data-id="5">2</button> </div> </div>
         <div class="button-group"> <h3 class="group-title">Calibration</h3> <div class="button-row"> <button data-id="6">Open</button> <button data-id="7">Short</button> <button data-id="8">Load</button> </div> </div>
+        <div class="button-group"> <div class="button-stack"> <button onclick="window.location='/test'">Test Mode</button> </div> </div>
         <div class="status" id="statusMessage">Select an option above.</div>
     </div>
     <script>

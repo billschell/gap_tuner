@@ -33,3 +33,6 @@ fp-info-cache
 # /exports/
 # If you wish to ignore generated manufacturing files, uncomment the lines above
 # and use these directories for your output.
+
+# for platform IO
+.pio

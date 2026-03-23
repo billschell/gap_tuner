@@ -1612,6 +1612,1247 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Relay:EE2-3NU"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "K"
+				(at 15.24 8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "EE2-3NU"
+				(at 19.05 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Relay_SMD:Relay_DPDT_Kemet_EE2_NU"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "General purpose signal relay, Kemet EE2 Series, DPDT (2 Form C), non-latching, SMD, 60W/125VA, 220VDC/250VAC, 2A, 3V DC coil"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "signal relay double pole double throw DPDT DC coil non latching"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Relay*DPDT*Kemet*EE2*NU*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "EE2-3NU_1_1"
+				(rectangle
+					(start -15.24 5.08)
+					(end 15.24 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -13.335 1.905)
+					(end -6.985 -1.905)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -12.7 -1.905) (xy -7.62 1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -10.16 5.08) (xy -10.16 1.905)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -10.16 -5.08) (xy -10.16 -1.905)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -6.985 0) (xy -6.35 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.715 0) (xy -5.08 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -4.445 0) (xy -3.81 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.175 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 5.08) (xy -2.54 2.54) (xy -1.905 3.175) (xy -2.54 3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.905 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 0) (xy 0 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy -1.905 3.81)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy 0 -5.08)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.905 0) (xy 2.54 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 5.08) (xy 2.54 2.54) (xy 1.905 3.175) (xy 2.54 3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.175 0) (xy 3.81 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.445 0) (xy 5.08 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.715 0) (xy 6.35 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.985 0) (xy 7.62 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 5.08) (xy 7.62 2.54) (xy 8.255 3.175) (xy 7.62 3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 8.255 0) (xy 8.89 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.16 -2.54) (xy 8.255 3.81)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.16 -2.54) (xy 10.16 -5.08)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 12.7 5.08) (xy 12.7 2.54) (xy 12.065 3.175) (xy 12.7 3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(text "+"
+					(at -9.271 2.921 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(pin passive line
+					(at -10.16 7.62 270)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -10.16 -7.62 90)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -2.54 7.62 270)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 7.62 270)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 7.62 270)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 10.16 -7.62 90)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 7.62 270)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Relay:EE2-3TNU"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "K"
+				(at 17.78 8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "EE2-3TNU"
+				(at 21.59 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Relay_SMD:Relay_DPDT_Kemet_EE2_NU_DoubleCoil"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "General purpose signal relay, Kemet EE2 Series, DPDT (2 Form C), double coil latching, SMD, 60W/125VA, 220VDC/250VAC, 2A, 3V DC coil"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "signal relay double pole double throw DPDT DC coil double dual coil latching"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Relay*DPDT*Kemet*EE2*NU*DoubleCoil*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "EE2-3TNU_1_1"
+				(rectangle
+					(start -20.32 5.08)
+					(end 20.32 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -18.415 1.905)
+					(end -12.065 -1.905)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -17.78 -1.905) (xy -12.7 1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -15.24 5.08) (xy -15.24 1.905)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -15.24 -5.08) (xy -15.24 -1.905)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -12.065 0) (xy -11.43 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -10.795 0) (xy -10.16 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -9.525 0) (xy -8.89 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -8.255 0) (xy -7.62 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -7.62 5.08) (xy -7.62 2.54) (xy -6.985 3.175) (xy -7.62 3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -6.985 0) (xy -6.35 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.715 0) (xy -5.08 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 -2.54) (xy -6.985 3.81)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 -2.54) (xy -5.08 -5.08)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -4.445 0) (xy -3.81 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.175 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 5.08) (xy -2.54 2.54) (xy -3.175 3.175) (xy -2.54 3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.905 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 0) (xy 0 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.905 0) (xy 2.54 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 5.08) (xy 2.54 2.54) (xy 3.175 3.175) (xy 2.54 3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.175 0) (xy 3.81 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.445 0) (xy 5.08 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 -2.54) (xy 3.175 3.81)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 -2.54) (xy 5.08 -5.08)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.715 0) (xy 6.35 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.985 0) (xy 7.62 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 5.08) (xy 7.62 2.54) (xy 6.985 3.175) (xy 7.62 3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 8.255 0) (xy 8.89 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 9.525 0) (xy 10.16 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.795 0) (xy 11.43 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 12.065 1.905)
+					(end 18.415 -1.905)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 12.7 -1.905) (xy 17.78 1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 15.24 5.08) (xy 15.24 1.905)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 15.24 -5.08) (xy 15.24 -1.905)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(text "+"
+					(at -14.351 2.921 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(text "S"
+					(at -13.081 2.921 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(text "+"
+					(at 16.129 2.921 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(text "R"
+					(at 17.526 2.921 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(pin passive line
+					(at -15.24 7.62 270)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -15.24 -7.62 90)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 7.62 270)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -7.62 90)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -2.54 7.62 270)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 7.62 270)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -7.62 90)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 7.62 270)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 15.24 7.62 270)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 15.24 -7.62 90)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:+3V3"
 			(power)
 			(pin_numbers
@@ -1840,8 +3081,8 @@
 		)
 	)
 	(rectangle
-		(start 22.86 33.02)
-		(end 54.61 60.96)
+		(start 19.05 29.21)
+		(end 50.8 57.15)
 		(stroke
 			(width 0)
 			(type default)
@@ -1883,7 +3124,7 @@
 	)
 	(text "10k pull-ups"
 		(exclude_from_sim no)
-		(at 32.258 57.912 0)
+		(at 28.448 54.102 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1912,16 +3153,22 @@
 		(uuid "f36bb980-cf7a-4bc4-8a47-97688f9dfc92")
 	)
 	(junction
-		(at 130.81 167.64)
+		(at 130.81 124.46)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "089cffc0-fddb-4b7b-9912-e477b62e0feb")
+		(uuid "021f1065-600c-41cc-91e5-7eb9c9f204f6")
 	)
 	(junction
-		(at 35.56 40.64)
+		(at 31.75 36.83)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1192bb74-f897-4891-8269-8e4e84ae8781")
+	)
+	(junction
+		(at 130.81 35.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "11d429ba-5746-4eef-a646-07e1dd92db88")
 	)
 	(junction
 		(at 120.65 220.98)
@@ -1936,28 +3183,16 @@
 		(uuid "19d90045-29ff-4ff8-a59d-4a889587d1dc")
 	)
 	(junction
-		(at 48.26 40.64)
+		(at 44.45 36.83)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "20070095-d1a2-48d8-9ee4-b80ad1aac1e1")
 	)
 	(junction
-		(at 130.81 78.74)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "235b2f68-4746-4ea1-bcff-5a9ae3ea4d1c")
-	)
-	(junction
-		(at 33.02 40.64)
+		(at 29.21 36.83)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2d103c7c-28b2-4d8b-851d-8d4a90ec9196")
-	)
-	(junction
-		(at 133.35 213.36)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "35fbf79e-ffb0-4917-822a-e1060d7f1b56")
 	)
 	(junction
 		(at 109.22 177.8)
@@ -1966,19 +3201,31 @@
 		(uuid "38f6ba84-ecaf-4045-8a98-b47285775e77")
 	)
 	(junction
+		(at 130.81 167.64)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3e7bac9b-ee35-40d0-b195-501e18ec4eb4")
+	)
+	(junction
 		(at 109.22 134.62)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4a4d7b65-6197-4e19-bd8a-f9fe2da53b38")
 	)
 	(junction
-		(at 30.48 40.64)
+		(at 133.35 213.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4d8713f7-a1fc-4dd9-9855-2e622b98c0b7")
+	)
+	(junction
+		(at 26.67 36.83)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5212b84c-085e-4bb7-a0e4-3747e5b41175")
 	)
 	(junction
-		(at 38.1 40.64)
+		(at 34.29 36.83)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6684eabf-6273-4dc6-9ae5-bbb73870afc7")
@@ -1996,13 +3243,13 @@
 		(uuid "6fcc3511-a97b-45fd-98b6-7c5c329b3146")
 	)
 	(junction
-		(at 27.94 40.64)
+		(at 24.13 36.83)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "92ba9afe-89a4-4b64-93ec-a9089315a2cf")
 	)
 	(junction
-		(at 45.72 40.64)
+		(at 41.91 36.83)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a9c4cb3a-9de7-4fd1-b84f-cda9c692e805")
@@ -2020,16 +3267,10 @@
 		(uuid "b15825f9-8f94-4bb7-98a3-3562750f1cd6")
 	)
 	(junction
-		(at 40.64 40.64)
+		(at 36.83 36.83)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c5230880-6249-419f-852e-28ea5c8e7bb6")
-	)
-	(junction
-		(at 130.81 35.56)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d0d83eb9-75bf-48fa-a168-b135e0202b7a")
 	)
 	(junction
 		(at 118.11 175.26)
@@ -2038,22 +3279,22 @@
 		(uuid "e03ee989-3ec4-4782-aed3-7234b51578a0")
 	)
 	(junction
-		(at 130.81 124.46)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ef904eb8-2b39-43a1-ab9d-b373d3feffab")
-	)
-	(junction
 		(at 118.11 43.18)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f3856d1b-58f3-4e05-b47f-4223de18e137")
 	)
 	(junction
-		(at 43.18 40.64)
+		(at 39.37 36.83)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f581bfe0-7c32-45b9-991e-1c0b63421f19")
+	)
+	(junction
+		(at 130.81 78.74)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f61913eb-75a9-49f9-9685-df7ca333e54c")
 	)
 	(wire
 		(pts
@@ -2067,53 +3308,13 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 121.92) (xy 128.27 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "05ba3dda-bcc4-4cf0-be4c-96b8eeb1e177")
-	)
-	(wire
-		(pts
-			(xy 128.27 35.56) (xy 130.81 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "06e801db-b5ff-41e8-b4c7-2125d87582c0")
-	)
-	(wire
-		(pts
-			(xy 128.27 76.2) (xy 128.27 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "07ebe253-7535-4909-9736-3fea81e6b5a9")
-	)
-	(wire
-		(pts
-			(xy 27.94 40.64) (xy 30.48 40.64)
+			(xy 24.13 36.83) (xy 26.67 36.83)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "13abc5d8-91ab-4b0b-bab7-16b8ed78c9f2")
-	)
-	(wire
-		(pts
-			(xy 130.81 213.36) (xy 133.35 213.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "17d6414d-36ec-4060-a9d5-4e6e04b36a23")
 	)
 	(wire
 		(pts
@@ -2127,7 +3328,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 40.64) (xy 50.8 40.64)
+			(xy 44.45 36.83) (xy 46.99 36.83)
 		)
 		(stroke
 			(width 0)
@@ -2177,7 +3378,7 @@
 	)
 	(wire
 		(pts
-			(xy 30.48 40.64) (xy 33.02 40.64)
+			(xy 26.67 36.83) (xy 29.21 36.83)
 		)
 		(stroke
 			(width 0)
@@ -2194,16 +3395,6 @@
 			(type default)
 		)
 		(uuid "2b3461e0-6429-4740-bb10-e660b3268c45")
-	)
-	(wire
-		(pts
-			(xy 128.27 165.1) (xy 128.27 167.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "31a07ea5-f2eb-4f45-9395-fb83a39a3b8e")
 	)
 	(wire
 		(pts
@@ -2224,16 +3415,6 @@
 			(type default)
 		)
 		(uuid "3f5aa7a2-4628-421b-914f-605b2cc16078")
-	)
-	(wire
-		(pts
-			(xy 128.27 78.74) (xy 130.81 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3fde2555-82b9-4494-81ba-1ec687f851c4")
 	)
 	(wire
 		(pts
@@ -2267,7 +3448,7 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 40.64) (xy 40.64 40.64)
+			(xy 34.29 36.83) (xy 36.83 36.83)
 		)
 		(stroke
 			(width 0)
@@ -2284,16 +3465,6 @@
 			(type default)
 		)
 		(uuid "5298ef5a-4329-4766-830b-6480616445d0")
-	)
-	(wire
-		(pts
-			(xy 127 210.82) (xy 130.81 210.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "57fed462-bcf3-45b0-b7ed-69acbc0b4c2e")
 	)
 	(wire
 		(pts
@@ -2327,7 +3498,7 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 40.64) (xy 35.56 40.64)
+			(xy 29.21 36.83) (xy 31.75 36.83)
 		)
 		(stroke
 			(width 0)
@@ -2337,7 +3508,7 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 40.64) (xy 45.72 40.64)
+			(xy 39.37 36.83) (xy 41.91 36.83)
 		)
 		(stroke
 			(width 0)
@@ -2417,16 +3588,6 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 76.2) (xy 128.27 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "817861f5-6a69-43b7-9bce-8301a26d2104")
-	)
-	(wire
-		(pts
 			(xy 82.55 116.84) (xy 82.55 233.68)
 		)
 		(stroke
@@ -2487,7 +3648,7 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 40.64) (xy 48.26 40.64)
+			(xy 41.91 36.83) (xy 44.45 36.83)
 		)
 		(stroke
 			(width 0)
@@ -2504,16 +3665,6 @@
 			(type default)
 		)
 		(uuid "a5601034-a0b5-430b-a1f3-33b0e81cd66f")
-	)
-	(wire
-		(pts
-			(xy 128.27 33.02) (xy 128.27 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "abe2e60b-66ad-4f21-8264-526e6f74f511")
 	)
 	(wire
 		(pts
@@ -2567,17 +3718,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 167.64) (xy 130.81 167.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bd692e23-0eb4-4d0b-909f-42cfb62bd7a8")
-	)
-	(wire
-		(pts
-			(xy 40.64 40.64) (xy 43.18 40.64)
+			(xy 36.83 36.83) (xy 39.37 36.83)
 		)
 		(stroke
 			(width 0)
@@ -2607,23 +3748,13 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 40.64) (xy 38.1 40.64)
+			(xy 31.75 36.83) (xy 34.29 36.83)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "c89e202e-f47c-4e72-b63e-6bfed35fde4c")
-	)
-	(wire
-		(pts
-			(xy 128.27 124.46) (xy 130.81 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ca8702d1-4a7e-4e51-8574-94cda00fff8d")
 	)
 	(wire
 		(pts
@@ -2697,26 +3828,6 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 165.1) (xy 128.27 165.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e3dd2d0b-98e7-429d-b3ae-8466db11a385")
-	)
-	(wire
-		(pts
-			(xy 130.81 210.82) (xy 130.81 213.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e839f5b1-c38f-4c3d-8346-d9f662ecdea8")
-	)
-	(wire
-		(pts
 			(xy 118.11 39.37) (xy 118.11 43.18)
 		)
 		(stroke
@@ -2724,16 +3835,6 @@
 			(type default)
 		)
 		(uuid "e9c4dbe1-b6c2-45ff-b101-f3dc17b9f35d")
-	)
-	(wire
-		(pts
-			(xy 124.46 33.02) (xy 128.27 33.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "edad2bcb-aab4-4687-a733-30b6599a9c7c")
 	)
 	(wire
 		(pts
@@ -2754,16 +3855,6 @@
 			(type default)
 		)
 		(uuid "f1f0e65d-c31e-4bc1-b39d-91614ffaa570")
-	)
-	(wire
-		(pts
-			(xy 124.46 121.92) (xy 128.27 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f45ee381-d5f5-42c3-9b00-a347495c3ea0")
 	)
 	(wire
 		(pts
@@ -2797,7 +3888,7 @@
 	)
 	(global_label "PU5"
 		(shape input)
-		(at 38.1 48.26 270)
+		(at 34.29 44.45 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2807,7 +3898,7 @@
 		)
 		(uuid "0b0b50e1-db62-434b-a431-ed4ea358af7d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 38.1 55.0552 90)
+			(at 34.29 51.2452 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2819,7 +3910,7 @@
 	)
 	(global_label "PU3"
 		(shape input)
-		(at 33.02 48.26 270)
+		(at 29.21 44.45 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2829,7 +3920,7 @@
 		)
 		(uuid "1f2dd4a9-ffdd-45ba-b83d-75bc0e7af471")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 33.02 55.0552 90)
+			(at 29.21 51.2452 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2841,7 +3932,7 @@
 	)
 	(global_label "PU4"
 		(shape input)
-		(at 35.56 48.26 270)
+		(at 31.75 44.45 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2851,7 +3942,7 @@
 		)
 		(uuid "2756f80a-513b-4583-bf33-4f10a3b5c03e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 35.56 55.0552 90)
+			(at 31.75 51.2452 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2951,7 +4042,7 @@
 	)
 	(global_label "PU10"
 		(shape input)
-		(at 50.8 48.26 270)
+		(at 46.99 44.45 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2961,7 +4052,7 @@
 		)
 		(uuid "4f6b3723-be62-42c0-a211-d1ff3988adfe")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 50.8 56.2647 90)
+			(at 46.99 52.4547 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3127,7 +4218,7 @@
 	)
 	(global_label "PU2"
 		(shape input)
-		(at 30.48 48.26 270)
+		(at 26.67 44.45 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3137,7 +4228,7 @@
 		)
 		(uuid "799e5564-deaa-4c9e-a761-147e2d902082")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 30.48 55.0552 90)
+			(at 26.67 51.2452 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3369,7 +4460,7 @@
 	)
 	(global_label "PU7"
 		(shape input)
-		(at 43.18 48.26 270)
+		(at 39.37 44.45 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3379,7 +4470,7 @@
 		)
 		(uuid "b0d33da3-9f27-4c00-b203-6b859562f317")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 43.18 55.0552 90)
+			(at 39.37 51.2452 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3435,7 +4526,7 @@
 	)
 	(global_label "PU9"
 		(shape input)
-		(at 48.26 48.26 270)
+		(at 44.45 44.45 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3445,7 +4536,7 @@
 		)
 		(uuid "c1a7dfe5-3a2a-4e37-8f9a-abb81d5228ca")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 48.26 55.0552 90)
+			(at 44.45 51.2452 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3545,7 +4636,7 @@
 	)
 	(global_label "PU1"
 		(shape input)
-		(at 27.94 48.26 270)
+		(at 24.13 44.45 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3555,7 +4646,7 @@
 		)
 		(uuid "de36243c-89ba-4d25-8ba7-616f00aa4c4a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 27.94 55.0552 90)
+			(at 24.13 51.2452 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3721,7 +4812,7 @@
 	)
 	(global_label "PU6"
 		(shape input)
-		(at 40.64 48.26 270)
+		(at 36.83 44.45 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3731,7 +4822,7 @@
 		)
 		(uuid "f7bf4bc9-2267-4099-a918-f76abcd4e774")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 40.64 55.0552 90)
+			(at 36.83 51.2452 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3743,7 +4834,7 @@
 	)
 	(global_label "PU8"
 		(shape input)
-		(at 45.72 48.26 270)
+		(at 41.91 44.45 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3753,80 +4844,13 @@
 		)
 		(uuid "fd4beb1f-99b2-4056-b2ea-bcb1cd35beec")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 45.72 55.0552 90)
+			(at 41.91 51.2452 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 				(hide yes)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 116.84 165.1 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0115cb9f-1c24-4a1b-8930-c3022d20b9cd")
-		(property "Reference" "#PWR09"
-			(at 110.49 165.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 113.03 165.0999 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 116.84 165.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 116.84 165.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 116.84 165.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "6f3c8f29-a63f-48a8-af00-42dec040b925")
-		)
-		(instances
-			(project "throw_away"
-				(path "/b9e819b8-c680-4106-a07b-882e9bddfaf8"
-					(reference "#PWR09")
-					(unit 1)
-				)
 			)
 		)
 	)
@@ -3960,7 +4984,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 27.94 40.64 0)
+		(at 24.13 36.83 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3969,7 +4993,7 @@
 		(fields_autoplaced yes)
 		(uuid "04742b68-12e1-4c31-b218-27b7613ccb3c")
 		(property "Reference" "#PWR018"
-			(at 27.94 44.45 0)
+			(at 24.13 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3978,7 +5002,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 27.94 35.56 0)
+			(at 24.13 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3986,7 +5010,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 27.94 40.64 0)
+			(at 24.13 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3995,7 +5019,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 27.94 40.64 0)
+			(at 24.13 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4004,7 +5028,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 27.94 40.64 0)
+			(at 24.13 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4026,7 +5050,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 40.64 44.45 180)
+		(at 36.83 40.64 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4034,7 +5058,7 @@
 		(dnp no)
 		(uuid "04f6580e-8b3e-4684-b324-d6527807df49")
 		(property "Reference" "R16"
-			(at 34.29 44.45 90)
+			(at 30.48 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4043,7 +5067,7 @@
 			)
 		)
 		(property "Value" "10K"
-			(at 40.64 44.45 90)
+			(at 36.83 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4051,7 +5075,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 42.418 44.45 90)
+			(at 38.608 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4060,7 +5084,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 40.64 44.45 0)
+			(at 36.83 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4069,7 +5093,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 40.64 44.45 0)
+			(at 36.83 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4482,32 +5506,33 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 123.19 210.82 90)
+		(lib_id "Relay:EE2-3TNU")
+		(at 194.31 412.75 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "1922f8c4-b122-4687-b4a7-8442f93816e7")
-		(property "Reference" "C5"
-			(at 126.238 209.55 90)
+		(fields_autoplaced yes)
+		(uuid "1ba4a6f0-8282-48fa-9922-4b4d87fb4314")
+		(property "Reference" "K2"
+			(at 194.31 387.35 90)
 			(effects
 				(font
-					(size 0.762 0.762)
+					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "0.1uf"
-			(at 126.238 212.09 90)
+		(property "Value" "EE2-3TNU"
+			(at 194.31 389.89 90)
 			(effects
 				(font
-					(size 0.762 0.762)
+					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 127 209.8548 0)
+		(property "Footprint" "Relay_SMD:Relay_DPDT_Kemet_EE2_NU_DoubleCoil"
+			(at 194.31 412.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4515,8 +5540,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 123.19 210.82 0)
+		(property "Datasheet" "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"
+			(at 194.31 412.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4524,8 +5549,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
-			(at 123.19 210.82 0)
+		(property "Description" "General purpose signal relay, Kemet EE2 Series, DPDT (2 Form C), double coil latching, SMD, 60W/125VA, 220VDC/250VAC, 2A, 3V DC coil"
+			(at 194.31 412.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4533,16 +5558,40 @@
 				(hide yes)
 			)
 		)
-		(pin "2"
-			(uuid "53f35cfd-a5be-4e83-9708-e26d50620063")
+		(pin "4"
+			(uuid "c5aca28e-697c-44be-a355-cdf52bc715a2")
+		)
+		(pin "7"
+			(uuid "1d2887ec-dd55-4aca-bc0e-1059b71ce42d")
+		)
+		(pin "12"
+			(uuid "b0e62d68-cdec-4ef6-ad82-49a7fd60c785")
 		)
 		(pin "1"
-			(uuid "683a4310-5f98-43b2-97f6-8cd4afb49947")
+			(uuid "cf38512f-0808-421c-8280-2bdaaea2d601")
+		)
+		(pin "10"
+			(uuid "1afac851-8c88-4d3e-a98c-bf5cb2b3bc2d")
+		)
+		(pin "6"
+			(uuid "b8c5c044-6127-4759-aa36-b706da3b928b")
+		)
+		(pin "5"
+			(uuid "fcd0f374-f6d7-4bac-9775-cc7104435521")
+		)
+		(pin "3"
+			(uuid "69220f3d-a41f-4640-87d6-33d4c09f9a1c")
+		)
+		(pin "9"
+			(uuid "b1821788-c599-447d-9e2f-c8181a0771e0")
+		)
+		(pin "8"
+			(uuid "83816c36-db74-4713-a6d6-0e39d5ec504c")
 		)
 		(instances
-			(project "throw_away"
+			(project ""
 				(path "/b9e819b8-c680-4106-a07b-882e9bddfaf8"
-					(reference "C5")
+					(reference "K2")
 					(unit 1)
 				)
 			)
@@ -4550,7 +5599,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 50.8 44.45 180)
+		(at 46.99 40.64 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4558,7 +5607,7 @@
 		(dnp no)
 		(uuid "1dd24803-a303-447c-a6e5-b18a2d2f7ed5")
 		(property "Reference" "R20"
-			(at 44.45 44.45 90)
+			(at 40.64 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4567,7 +5616,7 @@
 			)
 		)
 		(property "Value" "10K"
-			(at 50.8 44.45 90)
+			(at 46.99 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4575,7 +5624,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 52.578 44.45 90)
+			(at 48.768 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4584,7 +5633,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 50.8 44.45 0)
+			(at 46.99 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4593,7 +5642,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 50.8 44.45 0)
+			(at 46.99 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4611,73 +5660,6 @@
 			(project "throw_away"
 				(path "/b9e819b8-c680-4106-a07b-882e9bddfaf8"
 					(reference "R20")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 116.84 121.92 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1f67c99e-050f-486d-872a-26685691fb36")
-		(property "Reference" "#PWR06"
-			(at 110.49 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 113.03 121.9199 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 116.84 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 116.84 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 116.84 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ec23fc7e-ef8f-459a-830a-7c0c216b0e4a")
-		)
-		(instances
-			(project "throw_away"
-				(path "/b9e819b8-c680-4106-a07b-882e9bddfaf8"
-					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -4812,75 +5794,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 116.84 33.02 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "23d9a36b-8435-4ff2-85de-fa8dea6578fd")
-		(property "Reference" "#PWR013"
-			(at 110.49 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 113.03 33.0199 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 116.84 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 116.84 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 116.84 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ada71e2f-1f8c-4883-882f-d7150aff3914")
-		)
-		(instances
-			(project ""
-				(path "/b9e819b8-c680-4106-a07b-882e9bddfaf8"
-					(reference "#PWR013")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
-		(at 33.02 44.45 180)
+		(at 29.21 40.64 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4888,7 +5803,7 @@
 		(dnp no)
 		(uuid "2f5ab76a-87e5-46ae-8ae3-edfc90bf1b0b")
 		(property "Reference" "R13"
-			(at 26.67 44.45 90)
+			(at 22.86 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4897,7 +5812,7 @@
 			)
 		)
 		(property "Value" "10K"
-			(at 33.02 44.45 90)
+			(at 29.21 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4905,7 +5820,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 34.798 44.45 90)
+			(at 30.988 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4914,7 +5829,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 33.02 44.45 0)
+			(at 29.21 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4923,7 +5838,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 33.02 44.45 0)
+			(at 29.21 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4941,6 +5856,98 @@
 			(project "throw_away"
 				(path "/b9e819b8-c680-4106-a07b-882e9bddfaf8"
 					(reference "R13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Relay:EE2-3TNU")
+		(at 194.31 363.22 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "35a896fa-86a7-49c7-bced-99871d7f6c0d")
+		(property "Reference" "K3"
+			(at 194.31 337.82 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "EE2-3TNU"
+			(at 194.31 340.36 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Relay_SMD:Relay_DPDT_Kemet_EE2_NU_DoubleCoil"
+			(at 194.31 363.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"
+			(at 194.31 363.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "General purpose signal relay, Kemet EE2 Series, DPDT (2 Form C), double coil latching, SMD, 60W/125VA, 220VDC/250VAC, 2A, 3V DC coil"
+			(at 194.31 363.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "673b476f-6b3e-4a35-ad79-60c669364d23")
+		)
+		(pin "7"
+			(uuid "93dc6e57-c746-401b-88fc-5e5cbc303f9c")
+		)
+		(pin "12"
+			(uuid "c1282044-ce07-43ea-81f8-427b1c97b875")
+		)
+		(pin "1"
+			(uuid "fdf04279-0a77-4f80-841d-70a7f1051740")
+		)
+		(pin "10"
+			(uuid "a8cb12a7-4a3b-4fca-833d-d8d308f348d3")
+		)
+		(pin "6"
+			(uuid "a5c151a1-f6f1-409b-8a2c-add472e374df")
+		)
+		(pin "5"
+			(uuid "592af1ae-98e4-4363-bfab-ae6580346095")
+		)
+		(pin "3"
+			(uuid "5532b51a-7637-40fb-bfbb-9ee4bb609da6")
+		)
+		(pin "9"
+			(uuid "5847098e-6ea9-4d81-a72b-0c43e8dd69ac")
+		)
+		(pin "8"
+			(uuid "bc48113c-3de0-48ee-8426-35a965387eb9")
+		)
+		(instances
+			(project "throw_away"
+				(path "/b9e819b8-c680-4106-a07b-882e9bddfaf8"
+					(reference "K3")
 					(unit 1)
 				)
 			)
@@ -5015,6 +6022,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 127 167.64 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4de55dad-42d1-472f-b870-5faf2aff4a1e")
+		(property "Reference" "C4"
+			(at 124.714 166.624 90)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Value" "0.1uf"
+			(at 124.206 168.656 90)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 130.81 166.6748 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 127 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 127 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "efbd969d-e015-4938-b3de-e780bd55d56b")
+		)
+		(pin "1"
+			(uuid "15bd92e3-c907-4c25-9ec9-a11736a9c952")
+		)
+		(instances
+			(project "throw_away"
+				(path "/b9e819b8-c680-4106-a07b-882e9bddfaf8"
+					(reference "C4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3V3")
 		(at 130.81 78.74 0)
 		(unit 1)
@@ -5081,7 +6155,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 43.18 44.45 180)
+		(at 39.37 40.64 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5089,7 +6163,7 @@
 		(dnp no)
 		(uuid "4f74c0d7-73b7-4aa9-8091-d03cb70c0901")
 		(property "Reference" "R17"
-			(at 36.83 44.45 90)
+			(at 33.02 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5098,7 +6172,7 @@
 			)
 		)
 		(property "Value" "10K"
-			(at 43.18 44.45 90)
+			(at 39.37 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5106,7 +6180,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 44.958 44.45 90)
+			(at 41.148 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5115,7 +6189,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 43.18 44.45 0)
+			(at 39.37 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5124,7 +6198,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 43.18 44.45 0)
+			(at 39.37 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5148,17 +6222,109 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 116.84 76.2 270)
+		(lib_id "Relay:EE2-3TNU")
+		(at 194.31 308.61 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "50ba062d-8b30-4a13-87f0-6243ba160e18")
-		(property "Reference" "#PWR02"
-			(at 110.49 76.2 0)
+		(uuid "4fb84648-b9ce-4350-8a5f-6aecd8cb6dae")
+		(property "Reference" "K4"
+			(at 194.31 283.21 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "EE2-3TNU"
+			(at 194.31 285.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Relay_SMD:Relay_DPDT_Kemet_EE2_NU_DoubleCoil"
+			(at 194.31 308.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"
+			(at 194.31 308.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "General purpose signal relay, Kemet EE2 Series, DPDT (2 Form C), double coil latching, SMD, 60W/125VA, 220VDC/250VAC, 2A, 3V DC coil"
+			(at 194.31 308.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "1e952d60-1c6f-4880-893e-67ae9bb8778e")
+		)
+		(pin "7"
+			(uuid "da7709f6-eea8-41f1-b48e-8bcc6cda7d35")
+		)
+		(pin "12"
+			(uuid "98d3603d-dd53-483d-8028-3da783bbc34b")
+		)
+		(pin "1"
+			(uuid "ccfc4af7-c491-4323-b999-0b461e9d0c97")
+		)
+		(pin "10"
+			(uuid "abd3d205-2472-4f4e-b3b9-a26168b892b2")
+		)
+		(pin "6"
+			(uuid "ed5b12c1-06a9-4960-91c2-39dc9ad67aa5")
+		)
+		(pin "5"
+			(uuid "2e47911d-094a-4aa8-8b66-aa9050211895")
+		)
+		(pin "3"
+			(uuid "1d6e072f-2114-49dc-a288-ad97e8405c62")
+		)
+		(pin "9"
+			(uuid "05f29014-7494-4f1e-b0ea-4fe07270b271")
+		)
+		(pin "8"
+			(uuid "0afc0445-b390-424c-b45c-d978fd3977c9")
+		)
+		(instances
+			(project "throw_away"
+				(path "/b9e819b8-c680-4106-a07b-882e9bddfaf8"
+					(reference "K4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 123.19 124.46 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "50593047-c010-486e-b6c7-dd4ab14497e8")
+		(property "Reference" "#PWR06"
+			(at 116.84 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5167,7 +6333,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 113.03 76.1999 90)
+			(at 119.38 124.4599 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5176,7 +6342,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 116.84 76.2 0)
+			(at 123.19 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5185,7 +6351,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 116.84 76.2 0)
+			(at 123.19 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5194,7 +6360,74 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 116.84 76.2 0)
+			(at 123.19 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "643f65eb-83df-4a73-b767-fc90f6cca167")
+		)
+		(instances
+			(project "throw_away"
+				(path "/b9e819b8-c680-4106-a07b-882e9bddfaf8"
+					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 123.19 78.74 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "50ba062d-8b30-4a13-87f0-6243ba160e18")
+		(property "Reference" "#PWR02"
+			(at 116.84 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 119.38 78.7399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 123.19 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 123.19 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 123.19 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5281,7 +6514,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 38.1 44.45 180)
+		(at 34.29 40.64 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5289,7 +6522,7 @@
 		(dnp no)
 		(uuid "5e36f79f-1c60-4efc-b28d-624b073fa4be")
 		(property "Reference" "R15"
-			(at 31.75 44.45 90)
+			(at 27.94 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5298,7 +6531,7 @@
 			)
 		)
 		(property "Value" "10K"
-			(at 38.1 44.45 90)
+			(at 34.29 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5306,7 +6539,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 39.878 44.45 90)
+			(at 36.068 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5315,7 +6548,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 38.1 44.45 0)
+			(at 34.29 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5324,7 +6557,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 38.1 44.45 0)
+			(at 34.29 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5342,73 +6575,6 @@
 			(project "throw_away"
 				(path "/b9e819b8-c680-4106-a07b-882e9bddfaf8"
 					(reference "R15")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 120.65 121.92 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "6519979d-f035-4e4c-83a9-56ca76dff893")
-		(property "Reference" "C3"
-			(at 123.698 120.65 90)
-			(effects
-				(font
-					(size 0.762 0.762)
-				)
-			)
-		)
-		(property "Value" "0.1uf"
-			(at 123.698 123.19 90)
-			(effects
-				(font
-					(size 0.762 0.762)
-				)
-			)
-		)
-		(property "Footprint" "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 124.46 120.9548 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 120.65 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 120.65 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "5aeedc20-cd4c-4ce5-84b5-c65413cb0c71")
-		)
-		(pin "1"
-			(uuid "3f38baa3-2261-4702-925a-356fb30e615e")
-		)
-		(instances
-			(project "throw_away"
-				(path "/b9e819b8-c680-4106-a07b-882e9bddfaf8"
-					(reference "C3")
 					(unit 1)
 				)
 			)
@@ -5483,84 +6649,35 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 120.65 165.1 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "6af192f3-64b1-4645-bd75-ade588c1fa9b")
-		(property "Reference" "C4"
-			(at 123.698 163.83 90)
-			(effects
-				(font
-					(size 0.762 0.762)
-				)
-			)
-		)
-		(property "Value" "0.1uf"
-			(at 123.698 166.37 90)
-			(effects
-				(font
-					(size 0.762 0.762)
-				)
-			)
-		)
-		(property "Footprint" "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 124.46 164.1348 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 120.65 165.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 120.65 165.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "d1a42db0-1f2b-499f-b143-01db0b6e0be5")
-		)
-		(pin "1"
-			(uuid "fa2a7880-3dda-49f0-a9ea-3e3bd62f780e")
-		)
-		(instances
-			(project "throw_away"
-				(path "/b9e819b8-c680-4106-a07b-882e9bddfaf8"
-					(reference "C4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 119.38 210.82 270)
+		(lib_id "Relay:EE2-3NU")
+		(at 43.18 259.08 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "73bb3dfc-f209-4b0b-995c-cd8882546e15")
-		(property "Reference" "#PWR015"
-			(at 113.03 210.82 0)
+		(uuid "7d28c885-d9cc-4f3c-937f-290645662d11")
+		(property "Reference" "K1"
+			(at 59.69 257.8099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "EE2-3NU"
+			(at 59.69 260.3499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Relay_SMD:Relay_DPDT_Kemet_EE2_NU"
+			(at 43.18 259.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5568,17 +6685,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
-			(at 115.57 210.8199 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 119.38 210.82 0)
+		(property "Datasheet" "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"
+			(at 43.18 259.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5586,8 +6694,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 119.38 210.82 0)
+		(property "Description" "General purpose signal relay, Kemet EE2 Series, DPDT (2 Form C), non-latching, SMD, 60W/125VA, 220VDC/250VAC, 2A, 3V DC coil"
+			(at 43.18 259.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5595,22 +6703,34 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 119.38 210.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
+		(pin "8"
+			(uuid "7ae729b4-233e-42d0-a64f-b0864348a26b")
+		)
+		(pin "12"
+			(uuid "19597b8a-e849-48c8-81c9-b76713d9c3b0")
+		)
+		(pin "3"
+			(uuid "adcefaba-1d8c-4f20-8289-422839c41a73")
 		)
 		(pin "1"
-			(uuid "665eaf89-9f8f-48c9-97e0-bf3e7091d918")
+			(uuid "a3d916d0-db06-416f-9ba6-46695e2db92e")
+		)
+		(pin "10"
+			(uuid "65f82bd1-8664-44fa-8f45-0ed4b6d20236")
+		)
+		(pin "9"
+			(uuid "63b5b7c5-1e46-4ae3-87bd-a7c3f82056fb")
+		)
+		(pin "5"
+			(uuid "a6f0d98a-6539-4670-9fa3-57541a44a103")
+		)
+		(pin "4"
+			(uuid "5d10eb73-1f35-48c8-964f-cfec7d7ee320")
 		)
 		(instances
-			(project "throw_away"
+			(project ""
 				(path "/b9e819b8-c680-4106-a07b-882e9bddfaf8"
-					(reference "#PWR015")
+					(reference "K1")
 					(unit 1)
 				)
 			)
@@ -5746,7 +6866,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 48.26 44.45 180)
+		(at 44.45 40.64 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5754,7 +6874,7 @@
 		(dnp no)
 		(uuid "8bdd84bd-e9af-4f5d-88e6-bd6082dbfb15")
 		(property "Reference" "R19"
-			(at 41.91 44.45 90)
+			(at 38.1 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5763,7 +6883,7 @@
 			)
 		)
 		(property "Value" "10K"
-			(at 48.26 44.45 90)
+			(at 44.45 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5771,7 +6891,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 50.038 44.45 90)
+			(at 46.228 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5780,7 +6900,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 48.26 44.45 0)
+			(at 44.45 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5789,7 +6909,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 48.26 44.45 0)
+			(at 44.45 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5807,6 +6927,207 @@
 			(project "throw_away"
 				(path "/b9e819b8-c680-4106-a07b-882e9bddfaf8"
 					(reference "R19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 123.19 35.56 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8d0e5f2a-b442-4070-b3ab-a5fa8a31a618")
+		(property "Reference" "#PWR013"
+			(at 116.84 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 119.38 35.5599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 123.19 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 123.19 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 123.19 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bee57b3c-0015-4ee6-8a0b-f4c70537e453")
+		)
+		(instances
+			(project "throw_away"
+				(path "/b9e819b8-c680-4106-a07b-882e9bddfaf8"
+					(reference "#PWR013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 127 35.56 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "92508d48-b1f0-4a30-b098-ce688829177a")
+		(property "Reference" "C1"
+			(at 124.714 34.544 90)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Value" "0.1uf"
+			(at 124.206 36.576 90)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 130.81 34.5948 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 127 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 127 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "0a8970ec-bb78-4ab8-bf1a-f81532589dd6")
+		)
+		(pin "1"
+			(uuid "d1b8ee71-8416-4723-93b8-e63276e47595")
+		)
+		(instances
+			(project "throw_away"
+				(path "/b9e819b8-c680-4106-a07b-882e9bddfaf8"
+					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 123.19 167.64 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "95381c32-c2b3-47ef-b068-080f6c1b3834")
+		(property "Reference" "#PWR020"
+			(at 116.84 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 119.38 167.6399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 123.19 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 123.19 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 123.19 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f2c0f7b3-e160-45ab-b752-e8d05fb4e6db")
+		)
+		(instances
+			(project "throw_away"
+				(path "/b9e819b8-c680-4106-a07b-882e9bddfaf8"
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -6009,7 +7330,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 30.48 44.45 180)
+		(at 26.67 40.64 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6017,7 +7338,7 @@
 		(dnp no)
 		(uuid "a43c3527-6be4-4bb6-a3da-b7ebcde41586")
 		(property "Reference" "R12"
-			(at 24.13 44.45 90)
+			(at 20.32 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6026,7 +7347,7 @@
 			)
 		)
 		(property "Value" "10K"
-			(at 30.48 44.45 90)
+			(at 26.67 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6034,7 +7355,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 32.258 44.45 90)
+			(at 28.448 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6043,7 +7364,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 30.48 44.45 0)
+			(at 26.67 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6052,7 +7373,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 30.48 44.45 0)
+			(at 26.67 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6077,7 +7398,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 120.65 76.2 90)
+		(at 127 78.74 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6085,7 +7406,7 @@
 		(dnp no)
 		(uuid "aad11b4c-2302-46b1-840d-48f60c141407")
 		(property "Reference" "C2"
-			(at 123.698 74.93 90)
+			(at 124.714 77.724 90)
 			(effects
 				(font
 					(size 0.762 0.762)
@@ -6093,7 +7414,7 @@
 			)
 		)
 		(property "Value" "0.1uf"
-			(at 123.698 77.47 90)
+			(at 124.206 79.756 90)
 			(effects
 				(font
 					(size 0.762 0.762)
@@ -6101,7 +7422,7 @@
 			)
 		)
 		(property "Footprint" "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 124.46 75.2348 0)
+			(at 130.81 77.7748 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6110,7 +7431,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 120.65 76.2 0)
+			(at 127 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6119,7 +7440,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 120.65 76.2 0)
+			(at 127 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6143,33 +7464,32 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 35.56 44.45 180)
+		(lib_id "Device:C")
+		(at 127 124.46 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "b37245c6-d0cb-4d07-8106-84766cc37d3c")
-		(property "Reference" "R14"
-			(at 29.21 44.45 90)
+		(uuid "b144d6f0-6fb5-4471-8777-74378d60ebf6")
+		(property "Reference" "C3"
+			(at 124.714 123.444 90)
 			(effects
 				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "10K"
-			(at 35.56 44.45 90)
-			(effects
-				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 37.338 44.45 90)
+		(property "Value" "0.1uf"
+			(at 124.206 125.476 90)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 130.81 123.4948 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6178,7 +7498,142 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 35.56 44.45 0)
+			(at 127 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 127 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "3658732c-c259-47db-b885-18f24ffedbcf")
+		)
+		(pin "1"
+			(uuid "c5bd3d07-dd65-4ca3-b13d-45c246575976")
+		)
+		(instances
+			(project "throw_away"
+				(path "/b9e819b8-c680-4106-a07b-882e9bddfaf8"
+					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 129.54 213.36 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b144d6f0-6fb5-4471-8777-74378d60ebf6")
+		(property "Reference" "C5"
+			(at 127.254 212.344 90)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Value" "0.1uf"
+			(at 126.746 214.376 90)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 133.35 212.3948 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 129.54 213.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 129.54 213.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "3658732c-c259-47db-b885-18f24ffedbcf")
+		)
+		(pin "1"
+			(uuid "c5bd3d07-dd65-4ca3-b13d-45c246575976")
+		)
+		(instances
+			(project "throw_away"
+				(path "/b9e819b8-c680-4106-a07b-882e9bddfaf8"
+					(reference "C5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 31.75 40.64 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b37245c6-d0cb-4d07-8106-84766cc37d3c")
+		(property "Reference" "R14"
+			(at 25.4 40.64 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "10K"
+			(at 31.75 40.64 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 33.528 40.64 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 31.75 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6187,7 +7642,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 35.56 44.45 0)
+			(at 31.75 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6277,32 +7732,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 120.65 33.02 90)
+		(lib_id "power:GND")
+		(at 125.73 213.36 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "bc837b66-baf8-4e8a-b61c-b4ed4359a95c")
-		(property "Reference" "C1"
-			(at 123.698 31.75 90)
-			(effects
-				(font
-					(size 0.762 0.762)
-				)
-			)
-		)
-		(property "Value" "0.1uf"
-			(at 123.698 34.29 90)
-			(effects
-				(font
-					(size 0.762 0.762)
-				)
-			)
-		)
-		(property "Footprint" "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 124.46 32.0548 0)
+		(fields_autoplaced yes)
+		(uuid "b817b3c2-8e64-4590-8d51-2e0aec7d75c8")
+		(property "Reference" "#PWR019"
+			(at 119.38 213.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6310,8 +7750,17 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 120.65 33.02 0)
+		(property "Value" "GND"
+			(at 121.92 213.3599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 125.73 213.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6319,8 +7768,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
-			(at 120.65 33.02 0)
+		(property "Datasheet" ""
+			(at 125.73 213.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6328,16 +7777,206 @@
 				(hide yes)
 			)
 		)
-		(pin "2"
-			(uuid "54706dc7-1003-4506-a1a7-b863afb265d0")
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 125.73 213.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
 		)
 		(pin "1"
-			(uuid "177f4631-d338-4471-9409-3e6551ca5d4e")
+			(uuid "35f90517-bb50-47f3-8fab-62b9ccf9cb7b")
 		)
 		(instances
-			(project ""
+			(project "throw_away"
 				(path "/b9e819b8-c680-4106-a07b-882e9bddfaf8"
-					(reference "C1")
+					(reference "#PWR019")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Relay:EE2-3TNU")
+		(at 194.31 255.27 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b8f4dea1-affc-489a-a73f-b83e03722183")
+		(property "Reference" "K5"
+			(at 194.31 229.87 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "EE2-3TNU"
+			(at 194.31 232.41 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Relay_SMD:Relay_DPDT_Kemet_EE2_NU_DoubleCoil"
+			(at 194.31 255.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"
+			(at 194.31 255.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "General purpose signal relay, Kemet EE2 Series, DPDT (2 Form C), double coil latching, SMD, 60W/125VA, 220VDC/250VAC, 2A, 3V DC coil"
+			(at 194.31 255.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "b62d5fdb-a374-496b-8e26-08c0d46996f8")
+		)
+		(pin "7"
+			(uuid "12b5434f-5529-4c2e-8c85-00183dfcdb1f")
+		)
+		(pin "12"
+			(uuid "fcf9e405-adff-41a6-9581-b5d7d1b36ef4")
+		)
+		(pin "1"
+			(uuid "87ff9b62-6f6e-40be-86f0-1856641964ef")
+		)
+		(pin "10"
+			(uuid "76a3403d-d301-4a72-a4f9-c581f2c9462c")
+		)
+		(pin "6"
+			(uuid "b2df93cd-71e5-40c6-ac58-0692d9439eea")
+		)
+		(pin "5"
+			(uuid "bc8a9477-69f9-4c5d-ab7e-ed4ffd897631")
+		)
+		(pin "3"
+			(uuid "34290d18-1b36-4009-8115-177a6f655ee2")
+		)
+		(pin "9"
+			(uuid "5533384c-d6cf-4514-a189-66f9c47772f9")
+		)
+		(pin "8"
+			(uuid "7a7728fa-e0cb-47e6-9b99-c64bae58e357")
+		)
+		(instances
+			(project "throw_away"
+				(path "/b9e819b8-c680-4106-a07b-882e9bddfaf8"
+					(reference "K5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Relay:EE2-3TNU")
+		(at 194.31 148.59 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bb04f24f-8bd8-4578-8272-608d64f9fd29")
+		(property "Reference" "K8"
+			(at 194.31 123.19 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "EE2-3TNU"
+			(at 194.31 125.73 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Relay_SMD:Relay_DPDT_Kemet_EE2_NU_DoubleCoil"
+			(at 194.31 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"
+			(at 194.31 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "General purpose signal relay, Kemet EE2 Series, DPDT (2 Form C), double coil latching, SMD, 60W/125VA, 220VDC/250VAC, 2A, 3V DC coil"
+			(at 194.31 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "c1e6df2d-afc9-41b1-b2ff-44ab7cd34bff")
+		)
+		(pin "7"
+			(uuid "e18ba452-221a-4f94-94de-bc603c8f4c36")
+		)
+		(pin "12"
+			(uuid "795e492d-a316-4fe5-a236-5483b93243f5")
+		)
+		(pin "1"
+			(uuid "6b16c680-1499-46a0-87cf-3d072b30008f")
+		)
+		(pin "10"
+			(uuid "fe6f0b1e-c594-4760-82cd-225df66c962d")
+		)
+		(pin "6"
+			(uuid "499c2167-c8ac-48ca-a52d-21830fd8a391")
+		)
+		(pin "5"
+			(uuid "96c9c0df-a4b2-4dee-b892-f3d977b11b52")
+		)
+		(pin "3"
+			(uuid "d2d8fa38-51c3-450f-9928-9aa03ecd2ece")
+		)
+		(pin "9"
+			(uuid "ef21de8d-0b7d-4307-a7d1-a94b39055938")
+		)
+		(pin "8"
+			(uuid "4c9b3fc0-de11-4554-859d-51f150461e81")
+		)
+		(instances
+			(project "throw_away"
+				(path "/b9e819b8-c680-4106-a07b-882e9bddfaf8"
+					(reference "K8")
 					(unit 1)
 				)
 			)
@@ -6403,6 +8042,98 @@
 			(project "throw_away"
 				(path "/b9e819b8-c680-4106-a07b-882e9bddfaf8"
 					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Relay:EE2-3TNU")
+		(at 194.31 198.12 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ce788d67-11ce-43e4-a29d-d0da0e6f0411")
+		(property "Reference" "K9"
+			(at 194.31 172.72 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "EE2-3TNU"
+			(at 194.31 175.26 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Relay_SMD:Relay_DPDT_Kemet_EE2_NU_DoubleCoil"
+			(at 194.31 198.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"
+			(at 194.31 198.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "General purpose signal relay, Kemet EE2 Series, DPDT (2 Form C), double coil latching, SMD, 60W/125VA, 220VDC/250VAC, 2A, 3V DC coil"
+			(at 194.31 198.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "d628f86e-e06d-4187-a38a-5d6bb3ddd553")
+		)
+		(pin "7"
+			(uuid "7604ef29-06ec-407e-a526-a220728620b0")
+		)
+		(pin "12"
+			(uuid "6b6a882c-5e9a-4fa3-a01c-1331900b3646")
+		)
+		(pin "1"
+			(uuid "f4c2ac22-2a25-430f-abc1-fc1d29e4aa9e")
+		)
+		(pin "10"
+			(uuid "71849ecb-0cd0-4143-9dc9-ae5cdb077c68")
+		)
+		(pin "6"
+			(uuid "9e5968bb-182f-4480-8da9-14c96cbe1957")
+		)
+		(pin "5"
+			(uuid "d1f8d4ca-73dd-4971-ac45-f00beccd8094")
+		)
+		(pin "3"
+			(uuid "f3334bd4-ec69-4c6c-be0b-134d1a1db4f6")
+		)
+		(pin "9"
+			(uuid "d4e6d7d7-7835-4353-be78-e5b4e2c9f608")
+		)
+		(pin "8"
+			(uuid "14782c95-0eda-4e2c-9fdc-63db331891aa")
+		)
+		(instances
+			(project "throw_away"
+				(path "/b9e819b8-c680-4106-a07b-882e9bddfaf8"
+					(reference "K9")
 					(unit 1)
 				)
 			)
@@ -6478,7 +8209,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 27.94 44.45 180)
+		(at 24.13 40.64 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6486,7 +8217,7 @@
 		(dnp no)
 		(uuid "df59ab2b-5347-4fe5-a844-076053611a08")
 		(property "Reference" "R11"
-			(at 21.59 44.45 90)
+			(at 17.78 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6495,7 +8226,7 @@
 			)
 		)
 		(property "Value" "10K"
-			(at 27.94 44.45 90)
+			(at 24.13 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6503,7 +8234,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 29.718 44.45 90)
+			(at 25.908 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6512,7 +8243,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 27.94 44.45 0)
+			(at 24.13 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6521,7 +8252,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 27.94 44.45 0)
+			(at 24.13 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6744,8 +8475,100 @@
 		)
 	)
 	(symbol
+		(lib_id "Relay:EE2-3TNU")
+		(at 194.31 93.98 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f2333f3c-951d-4103-aa61-c546e12396e6")
+		(property "Reference" "K7"
+			(at 194.31 68.58 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "EE2-3TNU"
+			(at 194.31 71.12 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Relay_SMD:Relay_DPDT_Kemet_EE2_NU_DoubleCoil"
+			(at 194.31 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"
+			(at 194.31 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "General purpose signal relay, Kemet EE2 Series, DPDT (2 Form C), double coil latching, SMD, 60W/125VA, 220VDC/250VAC, 2A, 3V DC coil"
+			(at 194.31 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "4f754bbd-4ad0-4df8-a78a-991b705bcffb")
+		)
+		(pin "7"
+			(uuid "e61bba3e-a071-4a08-9587-8e65a48bb5b0")
+		)
+		(pin "12"
+			(uuid "a8d5dec0-fc87-461f-adf1-6e8e93a0e8a5")
+		)
+		(pin "1"
+			(uuid "73f5be75-c7a0-48c3-9ae4-ccd485f84fc4")
+		)
+		(pin "10"
+			(uuid "74c40869-3f78-4a74-b7d6-cf9a5eb57a8e")
+		)
+		(pin "6"
+			(uuid "cdaffd1b-321a-4b36-a17f-3009a6632144")
+		)
+		(pin "5"
+			(uuid "c553e5ad-beed-4ea0-96ae-f207d0b4ca49")
+		)
+		(pin "3"
+			(uuid "f66194ac-f158-42f2-8fab-0dbfc6d5c05b")
+		)
+		(pin "9"
+			(uuid "795db1f8-f50f-4638-bb2d-31c5206a3402")
+		)
+		(pin "8"
+			(uuid "8246a5fb-2060-4c74-8c07-58ea5ec35869")
+		)
+		(instances
+			(project "throw_away"
+				(path "/b9e819b8-c680-4106-a07b-882e9bddfaf8"
+					(reference "K7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
-		(at 45.72 44.45 180)
+		(at 41.91 40.64 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6753,7 +8576,7 @@
 		(dnp no)
 		(uuid "f45994d3-0931-410c-8780-5293ee7912f5")
 		(property "Reference" "R18"
-			(at 39.37 44.45 90)
+			(at 35.56 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6762,7 +8585,7 @@
 			)
 		)
 		(property "Value" "10K"
-			(at 45.72 44.45 90)
+			(at 41.91 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6770,7 +8593,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 47.498 44.45 90)
+			(at 43.688 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6779,7 +8602,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 45.72 44.45 0)
+			(at 41.91 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6788,7 +8611,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 45.72 44.45 0)
+			(at 41.91 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6806,6 +8629,98 @@
 			(project "throw_away"
 				(path "/b9e819b8-c680-4106-a07b-882e9bddfaf8"
 					(reference "R18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Relay:EE2-3TNU")
+		(at 194.31 40.64 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fedd314b-45ec-44f5-820c-3e225ae07c29")
+		(property "Reference" "K6"
+			(at 194.31 15.24 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "EE2-3TNU"
+			(at 194.31 17.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Relay_SMD:Relay_DPDT_Kemet_EE2_NU_DoubleCoil"
+			(at 194.31 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"
+			(at 194.31 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "General purpose signal relay, Kemet EE2 Series, DPDT (2 Form C), double coil latching, SMD, 60W/125VA, 220VDC/250VAC, 2A, 3V DC coil"
+			(at 194.31 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "e7eec728-5f59-434f-80c6-ba6d187f5840")
+		)
+		(pin "7"
+			(uuid "0b650cb1-4d71-4186-9274-12579f9a928f")
+		)
+		(pin "12"
+			(uuid "2bd2a062-9e31-48b0-9f8d-ae0a45b525a3")
+		)
+		(pin "1"
+			(uuid "d14a9ed4-be12-4071-98cf-ef2c2adf9579")
+		)
+		(pin "10"
+			(uuid "f134d90f-b38e-42d5-b528-53c6a4267a12")
+		)
+		(pin "6"
+			(uuid "ce4cfc2a-2c4c-4be4-b7a3-405bcdc0ca9b")
+		)
+		(pin "5"
+			(uuid "d6ec9890-32b9-4e21-8edf-140f33f2cd5d")
+		)
+		(pin "3"
+			(uuid "f34599f9-8248-4ce8-a734-0724fdd29384")
+		)
+		(pin "9"
+			(uuid "613cb3d6-9042-47a1-9e83-767e78f648a0")
+		)
+		(pin "8"
+			(uuid "a8967dac-313d-4a3c-ac09-6a352f6c7e67")
+		)
+		(instances
+			(project "throw_away"
+				(path "/b9e819b8-c680-4106-a07b-882e9bddfaf8"
+					(reference "K6")
 					(unit 1)
 				)
 			)

@@ -1,6 +1,17 @@
 #include "GAPTuner.h"
 #include "DebugUtils.h" // For DEBUG_PRINTLN, DEBUG_PRINTF
 
+// Out-of-line definitions for static constexpr arrays (required for ODR-use in C++17)
+constexpr pinValue_t GAPTuner::s_antennaLengthShort[];
+constexpr pinValue_t GAPTuner::s_antennaLengthLong[];
+constexpr pinValue_t GAPTuner::s_tuningNetNone[];
+constexpr pinValue_t GAPTuner::s_tuningNet1[];
+constexpr pinValue_t GAPTuner::s_tuningNet2[];
+constexpr pinValue_t GAPTuner::s_calOpen[];
+constexpr pinValue_t GAPTuner::s_calShort[];
+constexpr pinValue_t GAPTuner::s_calLoad[];
+constexpr pinValue_t GAPTuner::s_allOff[];
+
 // Constructor
 GAPTuner::GAPTuner(RelayController& rc) : _relayController(rc)
 {  
@@ -25,13 +36,13 @@ String GAPTuner::processButtonAction(int buttonId_int, String& outMessage)
         actionDetails = applyRelayActions(outMessage, "Antenna set to Short:", s_antennaLengthShort);
         actionDetails += _relayController.pulse(RELAY_K5);
         actionDetails += _relayController.pulse(RELAY_K6);
-         digitalWrite(RELAY_K7, LOW);
+        _relayController.setRelay(RELAY_K7, false);
         break;
     case ButtonID::ANTENNA_LONG:
         actionDetails = applyRelayActions(outMessage, "Antenna set to Long:", s_antennaLengthLong);
         actionDetails += _relayController.pulse(RELAY_K5);
         actionDetails += _relayController.pulse(RELAY_K6);
-        digitalWrite(RELAY_K7, LOW);
+        _relayController.setRelay(RELAY_K7, false);
         break;
     case ButtonID::TUNING_NONE:
         actionDetails = applyRelayActions(outMessage, "Tuning Network set to None:", s_tuningNetNone);

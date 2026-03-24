@@ -510,12 +510,12 @@ static const char test_html[] PROGMEM = R"rawliteral(
         </div>
 
         <div class="button-group">
-            <h3 class="group-title">Non-Latching Relays (N) — 1s Pulse</h3>
+            <h3 class="group-title">Non-Latching Relays (N) — N4: Toggle | others: Pulse</h3>
             <div class="button-row">
                 <button data-group="N" data-relay="1">N1</button>
                 <button data-group="N" data-relay="2">N2</button>
                 <button data-group="N" data-relay="3">N3</button>
-                <button data-group="N" data-relay="4">N4</button>
+                <button data-group="N" data-relay="4" data-mode="toggle">N4</button>
             </div>
             <div class="button-row">
                 <button data-group="N" data-relay="5">N5</button>
@@ -548,7 +548,9 @@ static const char test_html[] PROGMEM = R"rawliteral(
                 .then(() => {
                     document.querySelectorAll('button[data-group="C"], button[data-group="L"]')
                         .forEach(b => b.classList.remove('highlighted'));
-                    document.querySelectorAll('button[data-group="N"]')
+                    document.querySelectorAll('button[data-group="N"][data-mode="toggle"]')
+                        .forEach(b => b.classList.remove('highlighted'));
+                    document.querySelectorAll('button[data-group="N"]:not([data-mode="toggle"])')
                         .forEach(b => b.classList.remove('pulsing'));
                 });
         }
@@ -581,8 +583,27 @@ static const char test_html[] PROGMEM = R"rawliteral(
             });
         });
 
-        // N relay buttons — 1-second pulse.
-        document.querySelectorAll('button[data-group="N"]').forEach(btn => {
+        // N4 toggle button — behaves like C/L relays (persistent ON/OFF state).
+        document.querySelectorAll('button[data-group="N"][data-mode="toggle"]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                if (btn.dataset.inflight) return;
+                const relay  = btn.dataset.relay;
+                const action = btn.classList.contains('highlighted') ? 'off' : 'on';
+                btn.dataset.inflight = '1';
+                fetch('/test/relay?group=N&relay=' + relay + '&action=' + action)
+                    .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })
+                    .then(resp => {
+                        const isOn = resp.trim() === 'on';
+                        btn.classList.toggle('highlighted', isOn);
+                        log('N' + relay + ': ' + (isOn ? 'ON' : 'OFF'));
+                    })
+                    .catch(err => log('N' + relay + ' error: ' + err.message))
+                    .finally(() => delete btn.dataset.inflight);
+            });
+        });
+
+        // N relay buttons (non-toggle) — 1-second pulse.
+        document.querySelectorAll('button[data-group="N"]:not([data-mode="toggle"])').forEach(btn => {
             btn.addEventListener('click', () => {
                 if (btn.classList.contains('pulsing')) return;
                 const relay = btn.dataset.relay;

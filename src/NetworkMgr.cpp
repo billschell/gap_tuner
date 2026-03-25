@@ -9,6 +9,7 @@
 #define NVS_KEY_PASS  "password"
 #define NVS_KEY_MODE  "mode"
 
+// Initialises NVS flash, opens the NVS namespace, and computes the AP SSID from the MAC address.
 NetworkMgr::NetworkMgr(const char* confHostname) :
     _hostname(confHostname), _wifiResetButtonPin(WIFI_RESET_BUTTON_PIN)
 {
@@ -32,6 +33,7 @@ NetworkMgr::NetworkMgr(const char* confHostname) :
     }
 }
 
+// Writes SSID and password to NVS flash and commits; returns false on any NVS error.
 bool NetworkMgr::saveCredentials(const char* ssid, const char* password) {
     if (_nvsHandle == 0) {
         DEBUG_PRINTLN("NetworkMgr: NVS handle not open.");
@@ -47,6 +49,7 @@ bool NetworkMgr::saveCredentials(const char* ssid, const char* password) {
     return true;
 }
 
+// Reads stored SSID and password from NVS into member variables; returns false if not found.
 bool NetworkMgr::loadCredentials() {
     if (_nvsHandle == 0) { return false; }
     size_t required_size;
@@ -72,6 +75,7 @@ bool NetworkMgr::loadCredentials() {
     return true;
 }
 
+// Erases SSID and password keys from NVS and clears the in-memory copies.
 void NetworkMgr::clearCredentials() {
     if (_nvsHandle == 0) { return; }
     nvs_erase_key(_nvsHandle, NVS_KEY_SSID);
@@ -82,6 +86,7 @@ void NetworkMgr::clearCredentials() {
     _password = "";
 }
 
+// Returns the stored operating mode ("field" or "home"), defaulting to "field" if absent.
 String NetworkMgr::getMode() {
     if (_nvsHandle == 0) { return "field"; }
     size_t required_size;
@@ -94,6 +99,7 @@ String NetworkMgr::getMode() {
     return mode;
 }
 
+// Persists the operating mode string to NVS flash.
 void NetworkMgr::setMode(const char* mode) {
     if (_nvsHandle == 0) { return; }
     esp_err_t ret = nvs_set_str(_nvsHandle, NVS_KEY_MODE, mode);
@@ -101,6 +107,7 @@ void NetworkMgr::setMode(const char* mode) {
     DEBUG_PRINTF("NetworkMgr: Mode set to '%s'\n", mode);
 }
 
+// Connects as STA in home mode or starts a soft-AP in field mode; falls back to AP if STA fails.
 bool NetworkMgr::connect() {
     String mode = getMode();
     DEBUG_PRINTF("NetworkMgr: Operating mode: '%s'\n", mode.c_str());
@@ -132,6 +139,7 @@ bool NetworkMgr::connect() {
     return false;
 }
 
+// Configures the ESP32 as a soft-AP on 192.168.4.1 using the computed SSID and default password.
 void NetworkMgr::startAP() {
     WiFi.mode(WIFI_AP);
     WiFi.softAP(_apSSID.c_str(), _apPassword);
@@ -143,6 +151,7 @@ void NetworkMgr::startAP() {
     DEBUG_PRINTF("NetworkMgr: Access at http://192.168.4.1\n");
 }
 
+// Starts mDNS and advertises the HTTP service so the device is reachable at <hostname>.local.
 void NetworkMgr::setupMDNS() {
     if (WiFi.status() != WL_CONNECTED) {
         DEBUG_PRINTLN("NetworkMgr: Cannot setup mDNS, WiFi not connected."); return;
@@ -155,10 +164,12 @@ void NetworkMgr::setupMDNS() {
     }
 }
 
+// Returns true when the WiFi station interface reports WL_CONNECTED.
 bool NetworkMgr::isConnected() {
     return WiFi.status() == WL_CONNECTED;
 }
 
+// Samples the reset button on startup; clears credentials and switches to field mode if held LOW.
 void NetworkMgr::checkAndHandleWiFiResetButton() {
     pinMode(_wifiResetButtonPin, INPUT_PULLUP);
     delay(500);

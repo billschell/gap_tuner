@@ -285,6 +285,7 @@ const FIELD_DESC_SWITCH  = 'Switch to field mode. Your phone will connect direct
 const HOME_DESC_ACTIVE   = 'Home WiFi mode is active. The GAP Tuner is connected to your home network.';
 const HOME_DESC_SWITCH   = 'Switch to home WiFi mode. Enter your network credentials below.';
 
+// Enables the Apply button only when the selected mode or credentials differ from the saved values.
 function updateApplyBtn() {
   const modeChanged  = selectedMode !== INIT_MODE;
   const ssid = document.getElementById('ssid');
@@ -294,6 +295,7 @@ function updateApplyBtn() {
   document.getElementById('applyBtn').disabled = !modeChanged && !credsChanged;
 }
 
+// Updates the segment toggle, visible section, and description text for the selected mode.
 function selectMode(mode) {
   selectedMode = mode;
   document.getElementById('sectionField').classList.toggle('visible', mode === 'field');
@@ -308,6 +310,7 @@ function selectMode(mode) {
 }
 selectMode(INIT_MODE);
 
+// POSTs the selected mode and credentials to /settings/save, then shows restart instructions.
 function applySettings() {
   const params = new URLSearchParams();
   params.append('mode', selectedMode);
@@ -369,6 +372,7 @@ function applySettings() {
   });
 }
 
+// Toggles the password input between visible text and masked password, updating the eye icon.
 function togglePassword() {
   const inp = document.getElementById('password');
   const ico = document.getElementById('eye-icon');
@@ -535,6 +539,7 @@ static const char test_html[] PROGMEM = R"rawliteral(
     <script>
         const statusLog = document.getElementById('statusMessage');
 
+        // Appends a new text line to the status log and scrolls to the bottom.
         function log(text) {
             const line = document.createElement('div');
             line.textContent = text;
@@ -542,6 +547,7 @@ static const char test_html[] PROGMEM = R"rawliteral(
             statusLog.scrollTop = statusLog.scrollHeight;
         }
 
+        // Calls /test/reset and clears all button highlight and pulse states in the UI.
         function doReset() {
             return fetch('/test/reset')
                 .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); })

@@ -25,7 +25,9 @@
 
 class RelayTestController {
 public:
+    // Default constructor; chip instances are created in initializePins().
     RelayTestController();
+    // Initialises the SPI bus and all five MAX4820 chips.
     void initializePins();
 
     // Set or reset a C latching relay. isSet=true pulses SET coil, false pulses RESET coil.

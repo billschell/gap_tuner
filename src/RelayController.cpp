@@ -10,6 +10,7 @@ RelayController::RelayController()
     // Constructor - chip instances created in initializePins()
 }
 
+// Initialises the SPI bus and creates all three MAX4820 chip instances.
 void RelayController::initializePins() {
     DEBUG_PRINTLN("RelayController: Initializing SPI and MAX4820 chips...");
     
@@ -37,6 +38,7 @@ void RelayController::initializePins() {
     DEBUG_PRINTLN("RelayController: All MAX4820 chips ready, all relays OFF");
 }
 
+// Iterates over the action array, routing each relay to the appropriate MAX4820 chip.
 String RelayController::applyActions(const pinValue_t actions[], size_t count) {
     String details = ""; 
     char buffer[100]; 
@@ -78,6 +80,7 @@ String RelayController::applyActions(const pinValue_t actions[], size_t count) {
     return details;
 }
 
+// Pulses the specified relay coil for its required duration and returns a log string.
 String RelayController::pulse(const relay_id_t relay) {
     char buffer[100]; 
     const size_t bufferSize = sizeof(buffer);
@@ -110,6 +113,7 @@ String RelayController::pulse(const relay_id_t relay) {
     return String(buffer);
 }
 
+// Directly sets the relay output high or low on the appropriate MAX4820 chip.
 void RelayController::setRelay(const relay_id_t relay, bool on) {
     const char* relayName = getRelayName(relay);
     const char* stateStr = on ? "ON" : "OFF";
@@ -132,6 +136,7 @@ void RelayController::setRelay(const relay_id_t relay, bool on) {
     }
 }
 
+// Maps a latching relay ID to its zero-based output index on the MAX4820 chip.
 uint8_t RelayController::getLatchingRelayIndex(relay_id_t relay) {
     // Map latching relay IDs to their chip output index (0-7)
     switch (relay) {
@@ -143,6 +148,7 @@ uint8_t RelayController::getLatchingRelayIndex(relay_id_t relay) {
     }
 }
 
+// Maps relay ID enum values to printable name strings for debug output.
 const char* RelayController::getRelayName(relay_id_t relay_val) {
     switch (relay_val) {
         case RELAY_K1: return "RELAY_K1"; 

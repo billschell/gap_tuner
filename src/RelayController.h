@@ -50,10 +50,15 @@ typedef struct PinValueStruct {
 
 class RelayController {
 public:
+    // Default constructor; chip instances are created in initializePins().
     RelayController();
+    // Initialises the SPI bus and instantiates all three MAX4820 chips.
     void initializePins();
+    // Drives a batch of relay outputs described by an array of pin-value pairs.
     String applyActions(const pinValue_t actions[], size_t count);
+    // Pulses one relay coil for the datasheet-specified duration (15 ms latching, 100 ms non-latching).
     String pulse(const relay_id_t relay);
+    // Directly drives one relay output high or low without any timed pulse.
     void setRelay(const relay_id_t relay, bool on);
 
 private:
@@ -62,8 +67,9 @@ private:
     MAX4820* _maxChip_LatchSet;     // SET coils for latching relays
     MAX4820* _maxChip_LatchReset;   // RESET coils for latching relays
     
+    // Returns a printable name for the relay ID for debug output.
     const char* getRelayName(relay_id_t relay_val);
-    
+
     // Helper to get relay index for latching relays
     uint8_t getLatchingRelayIndex(relay_id_t relay);
 };

@@ -17,12 +17,14 @@ GAPTuner::GAPTuner(RelayController& rc) : _relayController(rc)
 {  
 }
 
+// Applies the all-off relay configuration to establish a safe power-up state.
 void GAPTuner::applyDefaultState()
 {
     DEBUG_PRINTLN("GAPTuner: Applying default power-up state (All Off)...");
     _relayController.applyActions(s_allOff, sizeof(s_allOff) / sizeof(s_allOff[0]));
 }
 
+// Dispatches the button ID to the matching relay configuration and any required pulse sequence.
 String GAPTuner::processButtonAction(int buttonId_int, String& outMessage)
 {
     String actionDetails = ""; 
@@ -72,6 +74,7 @@ String GAPTuner::processButtonAction(int buttonId_int, String& outMessage)
     return actionDetails;
 }
 
+// Maps ButtonID enum values to printable name strings for debug output.
 const char* GAPTuner::getButtonName(ButtonID buttonId)
 {
     switch (buttonId) {

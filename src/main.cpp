@@ -2,7 +2,7 @@
 const char* mDnsHostname = "gaptuner"; // Keep hostname for mDNS
 
 /*
- * ESP32 GAP Antenna Tuner Web Interface - v3 (K&R Indent)
+ * ESP32 GAP Antenna Tuner Web Interface - v3
  *
  * Controls relays via a web interface served using ESPAsyncWebServer.
  * Object-oriented design with classes for managing relays, tuner state (GAPTuner),
@@ -145,7 +145,7 @@ const char index_html[] PROGMEM = R"rawliteral(
             let apSSID = '';
             fetch('/info').then(r => r.json()).then(d => { apSSID = d.apSSID; }).catch(() => {});
 
-            // Helper function to determine button group
+            // Returns 'antenna' for buttons 1–2, 'other' for buttons 3–8, or 'unknown'.
             function getButtonGroup(buttonId) {
                 const id = parseInt(buttonId, 10);
                 if (id === 1 || id === 2) {
@@ -156,6 +156,7 @@ const char index_html[] PROGMEM = R"rawliteral(
                 return 'unknown'; // Should not happen with valid button IDs
             }
 
+            // Fetches /wifi-status and updates the indicator dot and status text; aborts after 5 s.
             function checkWifiStatus() {
                 const wifiIndicator = document.getElementById('wifiStatusIndicator');
                 const wifiStatusText = document.getElementById('wifiStatusText');
@@ -193,6 +194,7 @@ const char index_html[] PROGMEM = R"rawliteral(
             checkWifiStatus();
             setInterval(checkWifiStatus, 5000);
 
+            // Handles button clicks: highlights the active button and POSTs the action to /button.
             if (controlContainer) {
                 controlContainer.addEventListener('click', event => {
                     if (event.target.tagName === 'BUTTON' && event.target.dataset.id) {

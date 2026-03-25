@@ -1,6 +1,7 @@
 #include "RelayTestController.h"
 #include "DebugUtils.h"
 
+// Default constructor; all chip pointers initialised to null until initializePins() is called.
 RelayTestController::RelayTestController()
     : _maxChip_C_SET(nullptr), _maxChip_C_RESET(nullptr),
       _maxChip_L_SET(nullptr), _maxChip_L_RESET(nullptr),
@@ -8,6 +9,7 @@ RelayTestController::RelayTestController()
 {
 }
 
+// Initialises the SPI bus and instantiates all five MAX4820 chips; all relays start OFF.
 void RelayTestController::initializePins() {
     DEBUG_PRINTLN("RelayTestController: Initializing SPI and MAX4820 chips...");
 
@@ -29,6 +31,7 @@ void RelayTestController::initializePins() {
     DEBUG_PRINTLN("RelayTestController: All 5 MAX4820 chips initialized, all relays OFF");
 }
 
+// Pulses the SET or RESET coil of the specified KC latching relay.
 void RelayTestController::setC(int relayNum, bool isSet) {
     int idx = relayNum - 1;
     if (isSet) {
@@ -40,6 +43,7 @@ void RelayTestController::setC(int relayNum, bool isSet) {
     }
 }
 
+// Pulses the SET or RESET coil of the specified KL latching relay.
 void RelayTestController::setL(int relayNum, bool isSet) {
     int idx = relayNum - 1;
     if (isSet) {
@@ -51,11 +55,13 @@ void RelayTestController::setL(int relayNum, bool isSet) {
     }
 }
 
+// Directly drives the specified KN non-latching relay on or off.
 void RelayTestController::setN(int relayNum, bool on) {
     DEBUG_PRINTF("RelayTestController: KN%d -> %s\n", relayNum, on ? "ON" : "OFF");
     _maxChip_KN->setRelay(relayNum - 1, on);
 }
 
+// Pulses all KC and KL RESET coils and turns off all KN relays.
 void RelayTestController::resetAll() {
     DEBUG_PRINTLN("RelayTestController: Resetting all relays...");
 

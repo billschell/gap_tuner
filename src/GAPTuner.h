@@ -14,9 +14,12 @@ public:
     };
     static constexpr int NUM_ACTIONS = 8;
 
+    // Stores a reference to the relay controller used to drive hardware.
     GAPTuner(RelayController& rc);
 
+    // Sets all relays to their safe power-up defaults (all off).
     void applyDefaultState();
+    // Translates a numeric button ID into the corresponding relay sequence; populates outMessage with a status string.
     String processButtonAction(int buttonId_int, String& outMessage);
 
 private:
@@ -48,10 +51,12 @@ private:
 
 
 
+    // Applies a static relay configuration array and sets outMsg to the given prefix string.
     template<size_t N>
     String applyRelayActions(String& outMsg, const char* successMsgPrefix, const pinValue_t (&actions)[N]);
 
     RelayController& _relayController;
+    // Returns a human-readable name for the given ButtonID for debug logging.
     const char* getButtonName(ButtonID buttonId);
 };
 

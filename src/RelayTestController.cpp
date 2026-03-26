@@ -65,16 +65,26 @@ void RelayTestController::setN(int relayNum, bool on) {
 void RelayTestController::resetAll() {
     DEBUG_PRINTLN("RelayTestController: Resetting all relays...");
 
-    _maxChip_C_RESET->pulseRelays(0xFF, TEST_LATCH_PULSE_MS);
-    DEBUG_PRINTLN("RelayTestController: KC1-KC8 RESET");
+    // do one relay at a time to limit power consumption
+    for(int relay=0; relay < 8; relay++) {
+        _maxChip_L_RESET->setRelay(relay, 0);
+        delay(10);
+        _maxChip_C_RESET->setRelay(relay, 0);
+        delay(10);
+        _maxChip_KN->setRelay(relay, 0);
+        delay(10);
+    }
+    // _maxChip_C_RESET->pulseRelays(0xFF, TEST_LATCH_PULSE_MS);
+    // DEBUG_PRINTLN("RelayTestController: KC1-KC8 RESET");
 
-    delay(10);
+    // delay(10);
 
-    _maxChip_L_RESET->pulseRelays(0xFF, TEST_LATCH_PULSE_MS);
-    DEBUG_PRINTLN("RelayTestController: KL1-KL8 RESET");
+    // _maxChip_L_RESET->pulseRelays(0xFF, TEST_LATCH_PULSE_MS);
+    // DEBUG_PRINTLN("RelayTestController: KL1-KL8 RESET");
 
-    delay(10);
+    // delay(10);
 
-    _maxChip_KN->setRelays(0x00);
-    DEBUG_PRINTLN("RelayTestController: KN1-KN7 OFF");
+    // _maxChip_KN->setRelays(0x00);
+    // DEBUG_PRINTLN("RelayTestController: KN1-KN7 OFF");
+    DEBUG_PRINTLN("RelayTestController: All relays OFF");
 }

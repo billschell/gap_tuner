@@ -67,9 +67,9 @@ void RelayTestController::resetAll() {
 
     // do one relay at a time to limit power consumption
     for(int relay=0; relay < 8; relay++) {
-        _maxChip_L_RESET->setRelay(relay, 0);
+        _maxChip_L_RESET->pulseRelay(relay, 1);
         delay(10);
-        _maxChip_C_RESET->setRelay(relay, 0);
+        _maxChip_C_RESET->pulseRelay(relay, 1);
         delay(10);
         _maxChip_KN->setRelay(relay, 0);
         delay(10);

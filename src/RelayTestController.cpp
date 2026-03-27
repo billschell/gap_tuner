@@ -74,17 +74,6 @@ void RelayTestController::resetAll() {
         _maxChip_KN->setRelay(relay, 0);
         delay(10);
     }
-    // _maxChip_C_RESET->pulseRelays(0xFF, TEST_LATCH_PULSE_MS);
-    // DEBUG_PRINTLN("RelayTestController: KC1-KC8 RESET");
 
-    // delay(10);
-
-    // _maxChip_L_RESET->pulseRelays(0xFF, TEST_LATCH_PULSE_MS);
-    // DEBUG_PRINTLN("RelayTestController: KL1-KL8 RESET");
-
-    // delay(10);
-
-    // _maxChip_KN->setRelays(0x00);
-    // DEBUG_PRINTLN("RelayTestController: KN1-KN7 OFF");
     DEBUG_PRINTLN("RelayTestController: All relays OFF");
 }

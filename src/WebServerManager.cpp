@@ -459,7 +459,6 @@ static const char test_html[] PROGMEM = R"rawliteral(
         button:focus,button:focus-visible{outline:none;}
         button:active{transform:translateY(1px) scale(0.98);box-shadow:inset 0 1px 3px var(--icom-shadow-dark);}
         .highlighted{background-color:var(--icom-blue-accent);color:var(--icom-black);box-shadow:inset 0 1px 3px var(--icom-shadow-dark),0 1px 2px var(--icom-shadow-dark);}
-        .pulsing{background-color:var(--icom-blue-accent);color:var(--icom-black);box-shadow:inset 0 1px 3px var(--icom-shadow-dark),0 1px 2px var(--icom-shadow-dark);pointer-events:none;}
         .button-row{display:flex;gap:var(--button-h-spacing);justify-content:space-between;margin-bottom:var(--button-v-spacing);}
         .button-row:last-child{margin-bottom:0;}
         .button-row button{flex:1;}
@@ -514,17 +513,17 @@ static const char test_html[] PROGMEM = R"rawliteral(
         </div>
 
         <div class="button-group">
-            <h3 class="group-title">Non-Latching Relays (N) — N4: Toggle | others: Pulse</h3>
+            <h3 class="group-title">Non-Latching Relays (N) — Toggle</h3>
             <div class="button-row">
-                <button data-group="N" data-relay="1">N1</button>
-                <button data-group="N" data-relay="2">N2</button>
-                <button data-group="N" data-relay="3">N3</button>
+                <button data-group="N" data-relay="1" data-mode="toggle">N1</button>
+                <button data-group="N" data-relay="2" data-mode="toggle">N2</button>
+                <button data-group="N" data-relay="3" data-mode="toggle">N3</button>
                 <button data-group="N" data-relay="4" data-mode="toggle">N4</button>
             </div>
             <div class="button-row">
-                <button data-group="N" data-relay="5">N5</button>
-                <button data-group="N" data-relay="6">N6</button>
-                <button data-group="N" data-relay="7">N7</button>
+                <button data-group="N" data-relay="5" data-mode="toggle">N5</button>
+                <button data-group="N" data-relay="6" data-mode="toggle">N6</button>
+                <button data-group="N" data-relay="7" data-mode="toggle">N7</button>
             </div>
         </div>
 
@@ -554,10 +553,8 @@ static const char test_html[] PROGMEM = R"rawliteral(
                 .then(() => {
                     document.querySelectorAll('button[data-group="C"], button[data-group="L"]')
                         .forEach(b => b.classList.remove('highlighted'));
-                    document.querySelectorAll('button[data-group="N"][data-mode="toggle"]')
+                    document.querySelectorAll('button[data-group="N"]')
                         .forEach(b => b.classList.remove('highlighted'));
-                    document.querySelectorAll('button[data-group="N"]:not([data-mode="toggle"])')
-                        .forEach(b => b.classList.remove('pulsing'));
                 });
         }
 
@@ -605,23 +602,6 @@ static const char test_html[] PROGMEM = R"rawliteral(
                     })
                     .catch(err => log('N' + relay + ' error: ' + err.message))
                     .finally(() => delete btn.dataset.inflight);
-            });
-        });
-
-        // N relay buttons (non-toggle) — 1-second pulse.
-        document.querySelectorAll('button[data-group="N"]:not([data-mode="toggle"])').forEach(btn => {
-            btn.addEventListener('click', () => {
-                if (btn.classList.contains('pulsing')) return;
-                const relay = btn.dataset.relay;
-                btn.classList.add('pulsing');
-                log('N' + relay + ': ON');
-                fetch('/test/relay?group=N&relay=' + relay + '&action=on')
-                    .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); })
-                    .then(() => new Promise(resolve => setTimeout(resolve, 500))) // Wait 500ms before sending OFF command to ensure minimum pulse duration
-                    .then(() => fetch('/test/relay?group=N&relay=' + relay + '&action=off'))
-                    .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); })
-                    .then(() => { btn.classList.remove('pulsing'); log('N' + relay + ': OFF'); })
-                    .catch(err => { btn.classList.remove('pulsing'); log('N' + relay + ' error: ' + err.message); });
             });
         });
 

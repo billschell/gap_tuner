@@ -205,7 +205,7 @@ void WebServerManager::handleSettingsRequest(AsyncWebServerRequest *request) {
   .toggle-password{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;padding:0;cursor:pointer;color:var(--icom-light-grey);opacity:0.6;box-shadow:none;text-shadow:none;}
   .toggle-password:hover{opacity:1;}
   #applyBtn{display:block;width:100%;margin-top:8px;background-color:var(--icom-blue-accent);color:var(--icom-black);}
-  #applyBtn:disabled{opacity:0.5;cursor:default;transform:none;}
+  #applyBtn:disabled{display:none;}
   #statusMsg{margin-top:14px;font-size:0.85em;min-height:1.4em;color:#aaa;text-align:center;}
 </style>
 </head>

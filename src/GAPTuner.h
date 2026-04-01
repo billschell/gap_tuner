@@ -7,7 +7,7 @@
 class GAPTuner {
 public:
     enum class ButtonID : int {
-        ANTENNA_SHORT = 1, ANTENNA_LONG  = 2,
+        ANTENNA_SHORT = 2, ANTENNA_LONG  = 1,
         TUNING_NONE   = 3, TUNING_1      = 4, TUNING_2      = 5,
         CAL_OPEN      = 6, CAL_SHORT     = 7, CAL_LOAD      = 8,
         UNKNOWN       = 0
